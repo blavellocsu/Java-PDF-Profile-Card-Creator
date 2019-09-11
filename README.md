@@ -1,9 +1,6 @@
 # Java-PDF-Profile-Card-Creator
 A Simple GUI Java App that generates a PDF Profile Card based on the entered information
 
-### Background about the app / Inspiration:
-I work for a non-profit organization, Promise Child, that sponsors children all over the world.  Each donor that sponsors a child gets a profile card for that child.  Currently, we have a inefficient process for creating these cards— it involves duplicating files through the Save As function, and it is hard to manage 1,000+ profile cards in such a manner.
-
 
 ## How it works:
 I decided to create a GUI app that allows for the user to input the data about the child, select the picture, then generate a PDF profile card based on this information.
