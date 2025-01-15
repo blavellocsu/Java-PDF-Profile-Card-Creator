@@ -1,18 +1,52 @@
-# Java-PDF-Profile-Card-Creator
-A Simple GUI Java App that generates a PDF Profile Card based on the entered information
 
+# Java PDF Profile Card Creator
 
-## How it works:
-I decided to create a GUI app that allows for the user to input the data about the child, select the picture, then generate a PDF profile card based on this information.
+This Java application provides a graphical user interface (GUI) that enables users to input personal information and generate a PDF profile card based on the entered data.
 
-For the GUI class, I extend JFrame and implement the ActionListener to gather the data.  I use a JFileChooser to get a String of the photo filepath for the child's photo.
+## Features
 
-I used JOptionPane’s to alert the user of errors / successes.
+- **User-Friendly Interface**: The application utilizes `JFrame` to create a straightforward GUI for data entry.
+- **Image Selection**: Users can select a photo using `JFileChooser`, which will be included in the profile card.
+- **PDF Generation**: Employs the Apache PDFBox library to create a PDF document containing the provided information and selected image.
+- **Error Handling**: Incorporates `JOptionPane` dialogs to notify users of errors or successful operations.
 
-For the PDFCreator class, I used an Apache Open Source Library called PDFBox.  This allowed me to generate PDF’s.
+## Prerequisites
 
-Upon the user pressing "Submit" in the JFrame, the program checks for valid input. Assuming the input is valid, the program calls the constructor of PDFCreator.  This will create a directory in the current working directory titled /cards/, if the directory does not already exist.  Then, it will build the PDF and save it to that folder using the Promise Child Number as the name and append ".pdf" to the end. 
+- **Java Development Kit (JDK)**: Ensure that JDK 8 or higher is installed on your system.
+- **Apache PDFBox Library**: Download the PDFBox library from the [official website](https://pdfbox.apache.org/) and include it in your project's classpath.
 
-Example: '/ProfileCardApp/cards/1234.pdf'
+## Setup and Usage
 
-*NOTE* There are 2 pdf images I used to create the PDF’s— as the apps current state, the program requires the pdf’s to be in same main folder as the program.  These images are included in a folder called "Images Needed" in the zip.  They are "back_background.pdf", and "pc_background.pdf".  
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/brandonlavello/Java-PDF-Profile-Card-Creator.git
+   ```
+
+2. **Add PDFBox to Classpath**:
+
+   Download the PDFBox library and add the `pdfbox-app-x.y.z.jar` file to your project's classpath.
+   
+3. **Compile & Run the Application using Eclipse or other method**:
+
+   ```bash
+   java -cp .:pdfbox-app-x.y.z.jar ProfileCardApp
+   ```
+
+4. **Generate a Profile Card**:
+   - Enter the required personal information into the GUI fields.
+   - Use the "Select Photo" button to choose an image file.
+   - Click the "Submit" button to generate the PDF profile card.
+   - The generated PDF will be saved in the `cards` directory within the current working directory, named according to the provided identifier (e.g., `12345.pdf`).
+
+## Dependencies
+
+- **Apache PDFBox**: An open-source Java library for working with PDF documents. ([pdfbox.apache.org](https://pdfbox.apache.org/))
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+This application was developed by Brandon Lavello as a practical implementation of Java GUI development and PDF generation using the Apache PDFBox library.
